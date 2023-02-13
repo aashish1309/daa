@@ -1,8 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    int array[6]={3,5,9,13,16,19},low=0,high=5,i=1;
-    int x=16;
+    int size,val;
+    printf("enter the size of the array:");
+    scanf("%d",&size);
+    int array[size];
+    printf("enter the elements in the array:");
+    for(int i=0;i<size;i++){
+    scanf("%d",&array[i]);
+    }
+    int low=0,high=size,i=1;
+    int x;
+    printf("enter the element to be searched:");
+    scanf("%d",&x);
     while (low <= high) 
     {
         int mid=low+(high-low)/2;
@@ -21,3 +31,4 @@ int main()
     }
     return 0;
 }
+
