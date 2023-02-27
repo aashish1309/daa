@@ -1,0 +1,18 @@
+int cmpfunc (const void * a, const void * b) {
+   return ( *(int*)a - *(int*)b );
+}
+int heightChecker(int* heights, int heightsSize){
+    int i,min,count=0;
+    int arr[heightsSize];
+    for(i=0;i<heightsSize;i++){
+        arr[i]=heights[i];
+    }
+    qsort(heights,heightsSize,sizeof(int),cmpfunc);
+    for(int i=0;i<heightsSize;i++){
+            if(heights[i]!=arr[i]){
+                count++;
+        }
+    }
+return count;
+}
+    
